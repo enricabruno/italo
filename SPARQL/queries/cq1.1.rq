@@ -1,0 +1,11 @@
+SELECT DISTINCT ?author ?workTitle ?constraint ?constraintLabel
+WHERE {
+  ?work a lrmoo:F1_Work ;
+        rdaw:P10436 ?author ;
+        rdaw:P10088 ?workTitle .
+    
+  ?creation a lrmoo:F28_Expression_Creation ;
+            crm:P33_used_specific_technique ?constraint .
+  
+  ?constraint rdfs:label ?constraintLabel .
+}

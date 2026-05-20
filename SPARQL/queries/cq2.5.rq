@@ -1,0 +1,10 @@
+SELECT DISTINCT ?tarotCard ?cardLabel ?golemNarrativeType ?textualAnchor
+WHERE {
+  ?cardAtom crm:P62i_is_depicted_by ?tarotCard ;
+            vir:K1_denotes ?representation .
+  ?tarotCard rdfs:label ?cardLabel .
+  ?representation rdf:type ?golemNarrativeType ;
+                  crm:P190_has_symbolic_content ?textualAnchor .
+  FILTER(?golemNarrativeType != vir:IC9_Representation)
+  FILTER(CONTAINS(STR(?cardAtom), "storiaCinque"))
+}

@@ -1,0 +1,881 @@
+@base <http://w3id.org/italo/data/> .
+@prefix : <http://w3id.org/italo/data/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix desmos: <https://w3id.org/desmos/> .
+@prefix gc: <https://w3id.org/golem/ontology> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix rdae: <http://rdaregistry.info/Elements/e/> .
+@prefix rdam: <http://rdaregistry.info/Elements/m/> .
+@prefix rdaw: <http://rdaregistry.info/Elements/w/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vir: <http://w3id.org/vir#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# ----- Tabella 1: lrmoo:F1_Work -----
+
+:il-castello-dei-destini-incrociati-w a lrmoo:F1_Work ;
+    rdaw:P10088 "Il castello dei destini incrociati" ;
+    rdaw:P10436 "Italo Calvino" .
+
+
+# ----- Tabella 2: lrmoo:F28_Expression_Creation -----
+
+:e-creat-castello a lrmoo:F28_Expression_Creation ;
+    lrmoo:R17_created :il-castello-dei-destini-incrociati-e ;
+    crm:P33_used_specific_technique :lipophony_cons,
+                                    :mazzo-il-castello-dei-destini-incrociati, 
+                                    :magic-square_cons .
+
+
+# ----- Tabella 3: lrmoo:F2_Expression -----
+
+:introduzione a lrmoo:F2_Expression ;
+    rdae:P20312 "Presentazione" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:storiaUno a lrmoo:F2_Expression ;
+    rdae:P20312 "Storia dell'ingrato punito" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:storiaDue a lrmoo:F2_Expression ;
+    rdae:P20312 "Storia dell'alchimista che vendette l'anima" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:storiaTre a lrmoo:F2_Expression ;
+    rdae:P20312 "Storia della sposa dannata" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:storiaQuattro a lrmoo:F2_Expression ;
+    rdae:P20312 "Storia d'un ladro di sepolcri" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:storiaCinque a lrmoo:F2_Expression ;
+    rdae:P20312 "Storia dell'Orlando pazzo per amore" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:storiaSei a lrmoo:F2_Expression ;
+    rdae:P20312 "Storia di Astolfo sulla Luna" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+:tutteLeAltreStorie a lrmoo:F2_Expression ;
+    rdae:P20312 "Tutte le altre storie" ;
+    lrmoo:R3i_realises :il-castello-dei-destini-incrociati-w .
+
+
+# ----- Tabella 4: lrmoo:F3_Manifestation -----
+
+:il-castello-dei-destini-icrociati-m a lrmoo:F3_Manifestation ;
+    rdam:P30156 "Il castello dei destini incrociati" ;
+    rdam:P30088 "Milano" ;
+    rdam:P30011 "1973"^^xsd:integer ;
+    rdam:P30420 "Mondadori" ;
+    rdam:P30033 :introduzione,
+                :capitoloUno,
+                :capitoloDue,
+                :capitoloTre,
+                :capitoloQuattro,
+                :capitoloCinque,
+                :capitoloSei,
+                :tuttelealtrestorie .
+
+# ----- Tabella 6: lrmoo:F3_Manifestation -----
+
+:introduzione a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :presentazione ;
+    rdam:P30156 "Presentazione" .
+
+:capitoloUno a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :storiaUno ;
+    rdam:P30156 "Storia dell'ingrato punito" .
+
+:capitoloDue a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :storiaDue ;
+    rdam:P30156 "Storia dell'alchimista che vendette l'anima" .
+
+:capitoloTre a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :storiaTre ;
+    rdam:P30156 "Storia della sposa dannata" .
+
+:capitoloQuattro a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :storiaQuattro ;
+    rdam:P30156 "Storia d'un ladro di sepolcri" .
+
+:capitoloCinque a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :storiaCinque ;
+    rdam:P30156 "Storia dell'Orlando pazzo per amore" .
+
+:capitoloSei a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :storiaSei ;
+    rdam:P30156 "Storia di Astolfo sulla Luna" .
+
+:capitoloSette a lrmoo:F3_Manifestation ;
+    lrmoo:R4_embodies :tutteLeAltreStorie ;
+    rdam:P30156 "Tutte le altre storie" .
+
+
+# ----- Tabella 7: desmos:SemanticConstraint -----
+
+:lipophony_cons a desmos:SemanticConstraint ;
+    rdfs:label "Lipofonia" ;
+    skos:definition "Vincolo semantico legato ai personaggi ai quali manca la voce. Il termine è stato mutuato da Marcel Benabou (lipophonie)." ;
+    skos:related <https://www.wikidata.org/wiki/Q836165> ;
+    desmos:hasVisibility :visible_explicity ;
+    desmos:hasDegreeOfComplexity :soft ;
+    desmos:involvesOperation :soustraction .
+
+:mazzo-il-castello-dei-destini-incrociati a desmos:SemanticConstraint ;
+    rdfs:label "Mazzo di carte" ;
+    skos:definition "Vincolo semantico legato al tema delle storie che sono costruite creando delle sequenze narrative con un mazzo di tarocchi cinquecentesco che rimanda ad una ambientazione cavalleresca." ;
+    skos:exactMatch <https://www.wikidata.org/wiki/Q726633> ;
+    desmos:hasVisibility :visible_explicity ;
+    desmos:hasDegreeOfComplexity :soft ;
+    desmos:involvesOperation :displacement .
+
+
+# ----- Tabella 8: desmos:FormalConstraint -----
+
+:magic-square_cons a desmos:FormalConstraint ;
+    rdfs:label "Quadrato magico" ;
+    skos:definition "Vincolo formale legato alla disposizione delle carte. Ogni sequenza di carte corrisponde ad una storia all'interno della collezione. Dal momento che ogni sequenza all'interno del quadrato può essere letto da sinistra a destra, da destra a sinistra, da sopra a sotto o da sotto a sopra alcune carte si ripetono in più di una storia." ;
+    skos:exactMatch <https://www.wikidata.org/wiki/Q192089> ;
+    desmos:hasVisibility :visible_explicity ;
+    desmos:hasDegreeOfComplexity :hard ;
+    desmos:involvesOperation :displacement .
+
+
+# ----- Tabella 9: vir:IC1_IconographicAtom -----
+
+:re-di-spade-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :re-di-spade ;
+    vir:K1_denotes :re-di-spade-storiaCinque-orlando .
+
+:dieci-di-spade-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :dieci-di-spade ;
+    vir:K1_denotes :dieci-di-spade-storiaCinque-battaglia .
+
+:regina-di-spade-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :regina-di-spade ;
+    vir:K1_denotes :regina-di-spade-storiaCinque-angelica .
+
+:dieci-di-bastoni-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :dieci-di-bastoni ;
+    vir:K1_denotes :dieci-di-bastoni-storiaCinque-bosco .
+
+:il-carro-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-carro ;
+    vir:K1_denotes :il-carro-storiaCinque-angelica_incede .
+
+:lo-amore-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :lo-amore ;
+    vir:K1_denotes :lo-amore-storiaCinque-amore_angelica_e_medoro .
+
+:fante-di-bastoni-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :fante-di-bastoni ;
+    vir:K1_denotes :fante-di-bastoni-storiaCinque-medoro .
+
+:il-sole-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-sole ;
+    vir:K1_denotes :il-sole-storiaCinque-amorino_volante .
+
+:la-forza-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :la-forza ;
+    vir:K1_denotes :la-forza-storiaCinque-orlando_feroce .
+
+:cinque-di-bastoni-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :cinque-di-bastoni ;
+    vir:K1_denotes :cinque-di-bastoni-storiaCinque-schianto_dei_tronchi .
+
+:sette-di-spade-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :sette-di-spade ;
+    vir:K1_denotes :sette-di-spade-storiaCinque-durlindana .
+
+:cinque-di-denari-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :cinque-di-denari ;
+    vir:K1_denotes :cinque-di-denari-storiaCinque-energie_e_beni .
+
+:la-luna-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :la-luna ;
+    vir:K1_denotes :la-luna-storiaCinque-luna .
+
+:il-matto-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-matto ;
+    vir:K1_denotes :il-matto-storiaCinque-orlando .
+
+:tre-di-coppe-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :tre-di-coppe ;
+    vir:K1_denotes :tre-di-coppe-storiaCinque-ampolla .
+
+:la-giustizia-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :la-giustizia ;
+    vir:K1_denotes :la-giustizia-storiaCinque-cavalieri .
+
+:il-penduto-storiaCinque a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-penduto ;
+    vir:K1_denotes :il-penduto-storiaCinque-orlando .
+
+:cavaliere-di-bastoni-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :cavaliere-di-bastoni ;
+    vir:K1_denotes :cavaliere-di-bastoni-storiaSei-astolfo .
+
+:asso-di-spade-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :asso-di-spade ;
+    vir:K1_denotes :asso-di-spade-storiaSei-durlindana .
+
+:lo-imperatore-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :lo-imperatore ;
+    vir:K1_denotes :lo-imperatore-storiaSei-carlo_magno .
+
+:nove-di-coppe-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :nove-di-coppe ;
+    vir:K1_denotes :nove-di-coppe-storiaSei-banchetto .
+
+:il-matto-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-matto ;
+    vir:K1_denotes :il-matto-storiaSei-orlando .
+
+:lo-amore-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :lo-amore ;
+    vir:K1_denotes :lo-amore-storiaSei-amore .
+
+:il-mondo-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-mondo ;
+    vir:K1_denotes :il-mondo-storiaSei-parigi_assediata .
+
+:la-torre-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :la-torre ;
+    vir:K1_denotes :la-torre-storiaSei-caduta_dei_cadaveri .
+
+:nove-di-spade-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :nove-di-spade ;
+    vir:K1_denotes :nove-di-spade-storiaSei-orlando .
+
+:lo-eremita-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :lo-eremita ;
+    vir:K1_denotes :lo-eremita-storiaSei-indovino .
+
+:il-giudizio-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-giudizio ;
+    vir:K1_denotes :il-giudizio-storiaSei-cielo .
+
+:dieci-di-coppe-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :dieci-di-coppe ;
+    vir:K1_denotes :dieci-di-coppe-storiaSei-deposito .
+
+:il-carro-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-carro ;
+    vir:K1_denotes :il-carro-storiaSei-ippogrifo .
+
+:la-luna-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :la-luna ;
+    vir:K1_denotes :la-luna-storiaSei-luna .
+
+:la-ruota-della-fortuna-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :la-ruota-della-fortuna ;
+    vir:K1_denotes :la-ruota-della-fortuna-storiaSei-luna .
+
+:il-bagatto-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :il-bagatto ;
+    vir:K1_denotes :il-bagatto-storiaSei-poeta .
+
+:asso-di-denari-storiaSei a vir:IC1_IconographicAtom ;
+    crm:P62i_is_depicted_by :asso-di-denari ;
+    vir:K1_denotes :asso-di-denari-storiaSei-luna .
+
+
+# ----- Tabella 10: vir:IC9_Representation -----
+
+:re-di-spade-storiaCinque-orlando a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :orlando-guerriero ;
+    crm:P190_has_symbolic_content "Orlando paladino che mulinava la sua Durlindana." .
+
+:dieci-di-spade-storiaCinque-battaglia a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :battaglia-destino_bellicoso ;
+    crm:P190_has_symbolic_content "E subito i nostri occhi furono come accecati dal polverone delle battaglie [...]." .
+
+:regina-di-spade-storiaCinque-angelica a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :angelica-amata ;
+    crm:P190_has_symbolic_content "donna bionda, che in mezzo alle lame affilate e alle piastre di ferro affaccia l'inafferrabile sorriso d'un gioco sensuale, noi riconoscemmo Angelica, la maga venuta dal Catai per la rovina delle armate franche [...]." .
+
+:dieci-di-bastoni-storiaCinque-bosco a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :bosco-amore ;
+    crm:P190_has_symbolic_content "Vedemmo la foresta schiudersi malvolentieri all'avanzare del campione [...] Il bosco dell'amore, Orlando, non é luogo per te!" .
+
+:il-carro-storiaCinque-angelica_incede a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :angelica_incede-oggetto_di_amore_inseguito ;
+    crm:P190_has_symbolic_content "una sola visione lo occupava: [...] l'incedere fatato d'Angelica nel bosco [...]." .
+
+:lo-amore-storiaCinque-amore_angelica_e_medoro a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :amore_angelica_e_medoro-amore_non_corrisposto ;
+    crm:P190_has_symbolic_content "una stretta d'amore morbida e struggente univa intanto Angelica e Medoro." .
+
+:fante-di-bastoni-storiaCinque-medoro a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :medoro-amante ;
+    crm:P190_has_symbolic_content "un giovanottino del seguito, snello e civettuolo come una fanciulla" .
+
+:il-sole-storiaCinque-amorino_volante a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :amorino_volante-intelletto_fuggente_di_orlando ;
+    crm:P190_has_symbolic_content "Un amorino fuggiva a volo portando via il lume della saggezza d'Orlando [...]." .
+
+:la-forza-storiaCinque-orlando_feroce a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :orlando_feroce-violenza ;
+    crm:P190_has_symbolic_content "quel fiore della cavalleria trasformato in una cieca esplosione tellurica [...]." .
+
+:cinque-di-bastoni-storiaCinque-schianto_dei_tronchi a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :schianto_dei_tronchi_violenza ;
+    crm:P190_has_symbolic_content "schianto dei tronchi di quercia sradicati dall'ossesso" .
+
+:sette-di-spade-storiaCinque-durlindana a vir:IC9_Representation ;
+    rdf:type gc:G16_Object ;
+    crm:K14_symbolize :durlindana-abbandono_destino_bellicoso ;
+    crm:P190_has_symbolic_content "l'ozio della Durlindana rimasta appesa a un albero e dimenticata" .
+
+:cinque-di-denari-storiaCinque-energie_e_beni a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :energie_e_beni-spreco ;
+    crm:P190_has_symbolic_content "spreco d'energie e di beni" .
+
+:la-luna-storiaCinque-luna a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :luna-sconfitta ;
+    crm:P190_has_symbolic_content "una terra oramai lunare" .
+
+:il-matto-storiaCinque-orlando a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :orlando-pazzia ;
+    crm:P190_has_symbolic_content "Sfogato ormai il più grosso groppo di furore, [...] con la testa piena di penne [...] ecco che Orlando era disceso giù nel cuore caotico delle cose, [...] al punto d'intersezione di tutti gli ordini possibili." .
+
+:tre-di-coppe-storiaCinque-ampolla a vir:IC9_Representation ;
+    rdf:type gc:G16_Object ;
+    crm:K14_symbolize :ampolla-custodia_della_ragione ;
+    crm:P190_has_symbolic_content "La sua ragione? [...] un'ampolla custodita nella Valle delle Ragioni Perdute" .
+
+:la-giustizia-storiaCinque-cavalieri a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :cavalieri-recupero_della_ragione ;
+    crm:P190_has_symbolic_content "i cavalieri dell'Armata di Carlomagno seguivano le piste del loro campione [...], non rinunciavano a riportare la sua spada al servizio di Ragione e Giustizia." .
+
+:il-penduto-storiaCinque-orlando a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :orlando-armonia ;
+    crm:P190_has_symbolic_content "Il paladino legato a testa in giù [...] Lasciatemi così. Ho fatto tutto il giro e ho capito. Il mondo si legge all'incontrario. Tutto è chiaro." .
+
+:cavaliere-di-bastoni-storiaSei-astolfo a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :astolfo-cavaliere ;
+    crm:P190_has_symbolic_content "colui che del recupero s'era fatto un dovere [...] Astolfo" .
+
+:asso-di-spade-storiaSei-durlindana a vir:IC9_Representation ;
+    rdf:type gc:G16_Object ;
+    crm:K14_symbolize :durlindana-assenza_di_orlando ;
+    crm:P190_has_symbolic_content "la Durlindana d'Orlando rimasta inoperosa appesa a un albero..." .
+
+:lo-imperatore-storiaSei-carlo_magno a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :carlo_magno-regalità ;
+    crm:P190_has_symbolic_content "raffigurato con la barba bianca e la fiorita saggezza di Carlo Magno in trono..." .
+
+:nove-di-coppe-storiaSei-banchetto a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :banchetto-convivialità ;
+    crm:P190_has_symbolic_content "Prolungandosi l'assenza d'Orlando dal Campo Franco, Astolfo fu chiamato da Re Carlo e invitato a sedere a banchetto con lui..." .
+
+:il-matto-storiaSei-orlando a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :orlando-pazzia ;
+    crm:P190_has_symbolic_content "[...] Orlando, nostro nipote, ha perso il lume che distingue l'uomo e le bestie savie dalle bestie e dagli uomini matti, e adesso corre [...] cosparso di penne d'uccelli [...]." .
+
+:lo-amore-storiaSei-amore a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :amore-eros ;
+    crm:P190_has_symbolic_content "[...] alla pazzia lo ha spinto Eros, dio pagano, che più è represso più devasta..." .
+
+:il-mondo-storiaSei-parigi_assediata a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :parigi_assediata-nemico_saraceno ;
+    crm:P190_has_symbolic_content "Parigi nella cerchia dei suoi baluardi, stretta da mesi nell'assedio saraceno" .
+
+:la-torre-storiaSei-caduta_dei_cadaveri a vir:IC9_Representation ;
+    rdf:type gc:G5_Narrative_Event ;
+    crm:K14_symbolize :caduta_dei_cadaveri-sconfitta ;
+    crm:P190_has_symbolic_content "il precipitare dei cadaveri giù dagli spalti tra getti d'olio rovente e macchine d'assedio all'opera" .
+
+:nove-di-spade-storiaSei-orlando a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :orlando-speranza ;
+    crm:P190_has_symbolic_content "Solo nostro nipote potrebbe guidarci in una sortita che tagli il cerchio di ferro e di fuoco..." .
+
+:lo-eremita-storiaSei-indovino a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :indovino-sapienza ;
+    crm:P190_has_symbolic_content "un vecchio gobbo con la clessidra in mano, un indovino che rovescia il tempo irreversibile e prima del prima vede il dopo. [...] a questo sapiente o magomerlino che Astolfo si rivolge per ritrovare la ragione di Orlando" .
+
+:il-giudizio-storiaSei-cielo a vir:IC9_Representation ;
+    rdf:type gc:G16_Object ;
+    crm:K14_symbolize :cielo-ascensione ;
+    crm:P190_has_symbolic_content "È in cielo che tu devi salire Astolfo [...] indicava un'ascensione sovrumana" .
+
+:dieci-di-coppe-storiaSei-deposito a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :deposito-custodia_pensieri ;
+    crm:P190_has_symbolic_content "uno sterminato deposito conserva dentro ampolle messe in fila [...] le storie che gli uomini non vivono, i pensieri [...]." .
+
+:il-carro-storiaSei-ippogrifo a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :ippogrifo-movimento ;
+    crm:P190_has_symbolic_content "Astolfo il suo Ippogrifo l'aveva e montò in sella. Prese il largo nel cielo." .
+
+:la-luna-storiaSei-luna a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :luna-meta ;
+    crm:P190_has_symbolic_content "La Luna crescente gli venne incontro." .
+
+:la-ruota-della-fortuna-storiaSei-luna a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :luna-mondo_allo_incontrario ;
+    crm:P190_has_symbolic_content "una descrizione più particolareggiata del mondo della Luna, che ci lasciasse sbizzarrire nelle vecchie fantasie d'un mondo all'incontrario [...]." .
+
+:il-bagatto-storiaSei-poeta a vir:IC9_Representation ;
+    rdf:type gc:G1_Character ;
+    crm:K14_symbolize :poeta-narratore ;
+    crm:P190_has_symbolic_content "nome e immagine di significato controverso ma che qui pure può intendersi - dal calamo che tiene in mano come se scrivesse - un poeta." .
+
+:asso-di-denari-storiaSei-luna a vir:IC9_Representation ;
+    rdf:type gc:G13_Narrative_Location ;
+    crm:K14_symbolize :luna-deserto ;
+    crm:P190_has_symbolic_content "la Luna è un deserto, [...] da questa sfera arida parte ogni discorso e ogni poema [...]." .
+
+
+# ----- Tabella 11: crm:E90_SymbolicObject -----
+
+:orlando-guerriero a crm:E90_SymbolicObject ;
+    rdfs:label "Orlando guerriero" .
+
+:battaglia-destino_bellicoso a crm:E90_SymbolicObject ;
+    rdfs:label "Storia bellicosa di Orlando" .
+
+:angelica-amata a crm:E90_SymbolicObject ;
+    rdfs:label "Angelica amata da Orlando" .
+
+:bosco-amore a crm:E90_SymbolicObject ;
+    rdfs:label "Bosco dell'amore" .
+
+:angelica_incede-oggetto_di_amore_inseguito a crm:E90_SymbolicObject ;
+    rdfs:label "Angelica oggetto d'amore inseguito" .
+
+:amore_angelica_e_medoro-amore_non_corrisposto a crm:E90_SymbolicObject ;
+    rdfs:label "Amore non corrisposto" .
+
+:medoro-amante a crm:E90_SymbolicObject ;
+    rdfs:label "Amante" .
+
+:amorino_volante-intelletto_fuggente_di_orlando a crm:E90_SymbolicObject ;
+    rdfs:label "Orlando perde la ragione" .
+
+:orlando_feroce-violenza a crm:E90_SymbolicObject ;
+    rdfs:label "Violenza" .
+
+:schianto_dei_tronchi_violenza a crm:E90_SymbolicObject ;
+    rdfs:label "Violenza" .
+
+:durlindana-abbandono_destino_bellicoso a crm:E90_SymbolicObject ;
+    rdfs:label "Abbandono del destino bellicoso" .
+
+:energie_e_beni-spreco a crm:E90_SymbolicObject ;
+    rdfs:label "Spreco" .
+
+:luna-sconfitta a crm:E90_SymbolicObject ;
+    rdfs:label "Sconfitta" .
+
+:orlando-pazzia a crm:E90_SymbolicObject ;
+    rdfs:label "Pazzia di Orlando" .
+
+:ampolla-custodia_della_ragione a crm:E90_SymbolicObject ;
+    rdfs:label "Custodia della ragione" .
+
+:cavalieri-recupero_della_ragione a crm:E90_SymbolicObject ;
+    rdfs:label "Recupero della ragione" .
+
+:orlando-armonia a crm:E90_SymbolicObject ;
+    rdfs:label "Armonia interiore" .
+
+:astolfo-cavaliere a crm:E90_SymbolicObject ;
+    rdfs:label "Astolfo cavaliere" .
+
+:durlindana-assenza_di_orlando a crm:E90_SymbolicObject ;
+    rdfs:label "Assenza di Orlando" .
+
+:carlo_magno-regalità a crm:E90_SymbolicObject ;
+    rdfs:label "Regalità" .
+
+:banchetto-convivialità a crm:E90_SymbolicObject ;
+    rdfs:label "Convivialità" .
+
+:orlando-pazzia rdfs:label "Pazzia di Orlando" .
+
+:amore-eros a crm:E90_SymbolicObject ;
+    rdfs:label "Eros" .
+
+:parigi_assediata-nemico_saraceno a crm:E90_SymbolicObject ;
+    rdfs:label "Nemico saraceno" .
+
+:caduta_dei_cadaveri-sconfitta a crm:E90_SymbolicObject ;
+    rdfs:label "Sconfitta" .
+
+:orlando-speranza a crm:E90_SymbolicObject ;
+    rdfs:label "Speranza" .
+
+:indovino-sapienza a crm:E90_SymbolicObject ;
+    rdfs:label "Sapienza" .
+
+:cielo-ascensione a crm:E90_SymbolicObject ;
+    rdfs:label "Movimento ascensionale al cielo" .
+
+:deposito-custodia_pensieri a crm:E90_SymbolicObject ;
+    rdfs:label "Custodia dei pensieri" .
+
+:ippogrifo-movimento a crm:E90_SymbolicObject ;
+    rdfs:label "Movimento di Astolfo verso la luna" .
+
+:luna-meta a crm:E90_SymbolicObject ;
+    rdfs:label "Meta del viaggio di Astolfo" .
+
+:luna-mondo_allo_incontrario a crm:E90_SymbolicObject ;
+    rdfs:label "Mondo all'incontrario" .
+
+:poeta-narratore a crm:E90_SymbolicObject ;
+    rdfs:label "Narratore" .
+
+:luna-deserto a crm:E90_SymbolicObject ;
+    rdfs:label "Deserto" .
+
+
+# ----- Tabella 12: crm:E22_Human-Made_Object -----
+
+:il-matto a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Matto" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-bagatto a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Bagatto" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-papessa a crm:E22_Human-Made_Object ;
+    rdfs:label "La Papessa" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-imperatrice a crm:E22_Human-Made_Object ;
+    rdfs:label "L'Imperatrice" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:lo-imperatore a crm:E22_Human-Made_Object ;
+    rdfs:label "L'Imperatore" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-papa a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Papa" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:lo-amore a crm:E22_Human-Made_Object ;
+    rdfs:label "L'Amore" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-carro a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Carro" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-giustizia a crm:E22_Human-Made_Object ;
+    rdfs:label "La Giustizia" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:lo-eremita a crm:E22_Human-Made_Object ;
+    rdfs:label "L'Eremita" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-ruota-della-fortuna a crm:E22_Human-Made_Object ;
+    rdfs:label "La Ruota della Fortuna" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-forza a crm:E22_Human-Made_Object ;
+    rdfs:label "La Forza" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-penduto a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Penduto" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-morte a crm:E22_Human-Made_Object ;
+    rdfs:label "La Morte" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-temperanza a crm:E22_Human-Made_Object ;
+    rdfs:label "La Temperanza" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-diavolo a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Diavolo" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-torre a crm:E22_Human-Made_Object ;
+    rdfs:label "La Torre" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-stella a crm:E22_Human-Made_Object ;
+    rdfs:label "La Stella" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:la-luna a crm:E22_Human-Made_Object ;
+    rdfs:label "La Luna" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-sole a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Sole" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-giudizio a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Giudizio" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:il-mondo a crm:E22_Human-Made_Object ;
+    rdfs:label "Il Mondo" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:re-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Re di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:regina-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Regina di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cavaliere-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Cavaliere di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:fante-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Fante di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:dieci-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Dieci di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:nove-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Nove di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:otto-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Otto di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sette-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Sette di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sei-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Sei di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cinque-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Cinque di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:quattro-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Quattro di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:tre-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Tre di Denari" .
+
+:due-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Due di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:asso-di-denari a crm:E22_Human-Made_Object ;
+    rdfs:label "Asso di Denari" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:re-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Re di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:regina-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Regina di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cavaliere-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Cavaliere di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:fante-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Fante di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:dieci-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Dieci di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:nove-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Nove di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:otto-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Otto di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sette-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Sette di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sei-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Sei di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cinque-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Cinque di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:quattro-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Quattro di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:tre-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Tre di Spade" .
+
+:due-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Due di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:asso-di-spade a crm:E22_Human-Made_Object ;
+    rdfs:label "Asso di Spade" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:re-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Re di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:regina-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Regina di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cavaliere-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Cavaliere di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:fante-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Fante di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:dieci-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Dieci di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:nove-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Nove di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:otto-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Otto di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sette-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Sette di Coppe" .
+
+:sei-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Sei di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cinque-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Cinque di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:quattro-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Quattro di Coppe" .
+
+:tre-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Tre di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:due-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Due di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:asso-di-coppe a crm:E22_Human-Made_Object ;
+    rdfs:label "Asso di Coppe" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:re-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Re di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:regina-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Regina di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cavaliere-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Cavaliere di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:fante-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Fante di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:dieci-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Dieci di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:nove-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Nove di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:otto-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Otto di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sette-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Sette di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:sei-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Sei di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:cinque-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Cinque di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:quattro-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Quattro di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:tre-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Tre di Bastoni" .
+
+:due-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Due di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+:asso-di-bastoni a crm:E22_Human-Made_Object ;
+    rdfs:label "Asso di Bastoni" ;
+    crm:P46i_forms_part_of :mazzo-il-castello-dei-destini-incrociati .
+
+
+# ----- Tabella 13: crm:E22_Human-Made_Object -----
+
+:mazzo-il-castello-dei-destini-incrociati a crm:E22_Human-Made_Object ;
+    rdfs:label "Pierpont-Morgan Bergamo" ;
+    dct:created "XV secolo" .
+

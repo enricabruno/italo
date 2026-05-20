@@ -1,0 +1,14 @@
+SELECT DISTINCT ("Orlando" AS ?characterName) ?chapterTitle
+WHERE {
+  ?atomCinque crm:P62i_is_depicted_by ?c1 ; vir:K1_denotes ?repCinque .
+  ?atomSei crm:P62i_is_depicted_by ?c2 ; vir:K1_denotes ?repSei .
+  
+  FILTER(CONTAINS(STR(?atomCinque), "storiaCinque") && CONTAINS(STR(?atomSei), "storiaSei"))
+  
+  ?repCinque crm:K14_symbolize ?sharedConcept ; a gc:G1_Character .
+  ?repSei crm:K14_symbolize ?sharedConcept ; a gc:G1_Character .
+  ?story a lrmoo:F2_Expression ; rdae:P20312 ?chapterTitle .
+  BIND(STRAFTER(STR(?story), "http://w3id.org/italo/data/") AS ?storyLocalName)
+    
+  FILTER(CONTAINS(STR(?repCinque), ?storyLocalName) || CONTAINS(STR(?repSei), ?storyLocalName))
+}

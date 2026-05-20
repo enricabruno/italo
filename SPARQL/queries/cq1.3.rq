@@ -1,0 +1,6 @@
+SELECT ?constraint ?constraintLabel ?operation ?operationLabel
+WHERE {
+  ?constraint rdfs:label ?constraintLabel ;
+              desmos:involvesOperation ?operation .
+  OPTIONAL { ?operation rdfs:label ?operationLabel . }
+}

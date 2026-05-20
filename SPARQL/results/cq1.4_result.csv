@@ -1,0 +1,4 @@
+﻿constraint,constraintLabel,complexity,complexityLabel
+http://w3id.org/italo/data/01_constraint,Lipofonia,http://w3id.org/italo/data/soft,
+http://w3id.org/italo/data/02_constraint,Mazzo di carte,http://w3id.org/italo/data/soft,
+http://w3id.org/italo/data/03_constraint,Quadrato magico,http://w3id.org/italo/data/hard,

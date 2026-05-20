@@ -1,0 +1,519 @@
+@prefix odi:    <https://w3id.org/odi/> .
+@prefix desmos: <https://w3id.org/desmos/> .
+@prefix crm:    <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix lrmoo:  <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix vir:    <http://w3id.org/vir#> .
+@prefix gc:     <https://w3id.org/golem/ontology> .
+@prefix dul:    <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix rdaw:   <http://rdaregistry.info/Elements/w/> .
+@prefix rdae:   <http://rdaregistry.info/Elements/e/> .
+@prefix rdam:   <http://rdaregistry.info/Elements/m/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/italo> rdf:type owl:Ontology ;
+    rdfs:label "ITALO - Iconographic and Textual Architecture for Literary Observations"@en ;
+    rdfs:comment "A formal model that reuses and aligns existing cultural heritage ontologies to describe Italo Calvino's Il castello dei destini incrociati. The model is subdivided into three modules: the first concerning bibliographic description; the second regarding the literary constraints used by the author within the novel; the third describing the use of tarot cards within each story narrated by Italo Calvino."@en ;
+    owl:versionInfo "1.0" ;
+    dct:creator "Enrica Bruno, Maria Francesca Bocchi"@en .
+
+
+#################################################################
+#
+#    CLASS
+#
+#################################################################
+
+
+crm:E22_Human-Made_Object rdf:type owl:Class ;
+    rdfs:label "Human-Made Object"@en ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+    rdfs:subClassOf desmos:SemanticConstraint .
+
+crm:E29_Design_or_Procedure rdf:type owl:Class ;
+    rdfs:label "Design or Procedure"@en ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+    rdfs:subClassOf crm:E89_Propositional_Object .
+
+crm:E39_Actor rdf:type owl:Class ;
+    rdfs:label "Actor"@en ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:E53_Place rdf:type owl:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:E89_Propositional_Object rdf:type owl:Class ;
+    rdfs:label "Propositional Object"@en ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:E90_Symbolic_Object rdf:type owl:Class ;
+    rdfs:label "Symbolic Object"@en ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+lrmoo:F1_Work rdf:type owl:Class ;
+    rdfs:label "Work"@en ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:F2_Expression rdf:type owl:Class ;
+    rdfs:label "Expression"@en ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:F3_Manifestation rdf:type owl:Class ;
+    rdfs:label "Manifestation"@en ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:F28_Expression_Creation rdf:type owl:Class ;
+    rdfs:label "Expression Creation"@en ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> ;
+    rdfs:subClassOf dul:PlanExecution .
+
+vir:IC1_Iconographic_Atom rdf:type owl:Class ;
+    rdfs:label "Iconographical Atom"@en ;
+    rdfs:isDefinedBy <http://w3id.org/vir#> .
+
+vir:IC9_Representation rdf:type owl:Class ;
+    rdfs:label "Iconographic Representation"@en ;
+    rdfs:isDefinedBy <http://w3id.org/vir#> .
+
+gc:G1_Character rdf:type owl:Class ;
+    rdfs:label "Character"@en ;
+    rdfs:isDefinedBy <https://w3id.org/golem/ontology> ;
+    rdfs:subClassOf odi:Representation .
+
+gc:G5_Narrative_Event rdf:type owl:Class ;
+    rdfs:label "Narrative Event"@en ;
+    rdfs:isDefinedBy <https://w3id.org/golem/ontology> ;
+    rdfs:subClassOf odi:Representation .
+
+gc:G13_Narrative_Location rdf:type owl:Class ;
+    rdfs:label "Narrative Location"@en ;
+    rdfs:isDefinedBy <https://w3id.org/golem/ontology> ;
+    rdfs:subClassOf odi:Representation .
+
+gc:G16_Object rdf:type owl:Class ;
+    rdfs:label "Narrative Object"@en ;
+    rdfs:isDefinedBy <https://w3id.org/golem/ontology> ;
+    rdfs:subClassOf odi:Representation .
+
+dul:Description rdf:type owl:Class ;
+    rdfs:label "Description"@en ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+
+dul:Situation rdf:type owl:Class ;
+    rdfs:label "Situation"@en ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+
+dul:Plan rdf:type owl:Class ;
+    rdfs:label "Plan"@en ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+    rdfs:subClassOf dul:Description .
+
+dul:PlanExecution rdf:type owl:Class ;
+    rdfs:label "Plan Execution"@en ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+    rdfs:subClassOf dul:Situation .
+
+dul:Agent rdf:type owl:Class ;
+    rdfs:label "Agent"@en ;
+    rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+
+odi:DeckCard rdf:type owl:Class ;
+    rdfs:label "Deck Card"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf crm:E22_Human-Made_Object ;
+    owl:disjointWith odi:StoryCard .
+
+odi:StoryCard rdf:type owl:Class ;
+    rdfs:label "Story Card"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf vir:IC1_Iconographic_Atom ;
+    rdfs:subClassOf dul:Description ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty odi:specifies ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass odi:DeckCard
+    ] ;
+        rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty odi:carriesRepresentation ;
+        owl:someValuesFrom odi:Representation
+    ] .
+
+odi:Representation rdf:type owl:Class ;
+    rdfs:label "Representation"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf vir:IC9_Representation ;
+    rdfs:subClassOf dul:Situation ;
+    owl:disjointWith odi:Meaning .
+
+odi:Meaning rdf:type owl:Class ;
+    rdfs:label "Meaning"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf crm:E90_Symbolic_Object .
+
+odi:TarotDeck rdf:type owl:Class ;
+    rdfs:label "Tarot Deck"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf crm:E22_Human-Made_Object .
+
+odi:Person rdf:type owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf crm:E39_Actor .
+
+odi:Place rdf:type owl:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf crm:E53_Place .
+
+odi:Story rdf:type owl:Class ;
+    rdfs:label "Story"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf lrmoo:F2_Expression .
+
+odi:Edition rdf:type owl:Class ;
+    rdfs:label "Edition"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf lrmoo:F3_Manifestation .
+
+odi:Chapter rdf:type owl:Class ;
+    rdfs:label "Chapter"@en ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> ;
+    rdfs:subClassOf lrmoo:F3_Manifestation .
+
+desmos:LiteraryConstraint rdf:type owl:Class ;
+    rdfs:label "Literary Constraint"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> ;
+    rdfs:subClassOf crm:E29_Design_or_Procedure ;
+    rdfs:subClassOf dul:Plan .
+
+desmos:SemanticConstraint rdf:type owl:Class ;
+    rdfs:label "Semantic Constraint"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> ;
+    rdfs:subClassOf desmos:LiteraryConstraint .
+
+desmos:FormalConstraint rdf:type owl:Class ;
+    rdfs:label "Formal Constraint"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> ;
+    rdfs:subClassOf desmos:LiteraryConstraint .
+
+desmos:ProceduralOperation rdf:type owl:Class ;
+    rdfs:label "Procedural Operation"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:ConstraintVisibility rdf:type owl:Class ;
+    rdfs:label "Constraint Visibility"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:ComplexityDegree rdf:type owl:Class ;
+    rdfs:label "Complexity Degree"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+
+#################################################################
+#
+#    OBJECT PROPERTIES
+#
+#################################################################
+
+
+crm:P46i_forms_part_of rdf:type owl:ObjectProperty ;
+    rdfs:label "forms part of"@en ;
+    rdfs:domain crm:E22_Human-Made_Object ;
+    rdfs:range crm:E22_Human-Made_Object ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P62i_is_depicted_by rdf:type owl:ObjectProperty ;
+    rdfs:label "is depicted by"@en ;
+    rdfs:domain vir:IC1_Iconographic_Atom ;
+    rdfs:range crm:E22_Human-Made_Object ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P33_used_specific_technique rdf:type owl:ObjectProperty ;
+    rdfs:label "used specific technique"@en ;
+    rdfs:domain lrmoo:F28_Expression_Creation ;
+    rdfs:range crm:E29_Design_or_Procedure ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+vir:K1_denotes rdf:type owl:ObjectProperty ;
+    rdfs:label "denotes"@en ;
+    rdfs:domain vir:IC1_Iconographic_Atom;
+    rdfs:range vir:IC9_Representation ;
+    rdfs:isDefinedBy <http://w3id.org/vir> .
+
+vir:K14_symbolize rdf:type owl:ObjectProperty ;
+    rdfs:label "symbolize"@en ;
+    rdfs:domain vir:IC9_Representation ;
+    rdfs:range crm:E90_Symbolic_Object ;
+    rdfs:isDefinedBy <http://w3id.org/vir> .
+
+lrmoo:R3i_realises rdf:type owl:ObjectProperty ;
+    rdfs:label "realises"@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F1_Work ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R4_embodies rdf:type owl:ObjectProperty ;
+    rdfs:label "embodies"@en ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range lrmoo:F2_Expression .
+
+lrmoo:R5_has_component rdf:type owl:ObjectProperty ;
+    rdfs:label "has component"@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R17_created rdf:type owl:ObjectProperty ;
+    rdfs:label "created"@en ;
+    rdfs:domain lrmoo:F28_Expression_Creation ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+rdaw:P10436 rdf:type owl:ObjectProperty ;
+    rdfs:label "has author person"@en ;
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> .
+
+rdam:P30033 rdf:type owl:ObjectProperty ;
+    rdfs:label "has part manifestation"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range lrmoo:F3_Manifestation ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
+rdam:P30088 rdf:type owl:ObjectProperty ;
+    rdfs:label "has place of publication"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range crm:E53_Place ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
+rdam:P30420 rdf:type owl:ObjectProperty ;
+    rdfs:label "has publisher corporate body"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range crm:E39_Actor ;  
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
+rdam:P303362 rdf:type owl:ObjectProperty ;
+    rdfs:label "has publisher person"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
+dct:creator rdf:type owl:ObjectProperty ;
+    rdfs:label "creator"@en ;
+    rdfs:domain crm:E22_Human-Made_Object ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+odi:includes rdf:type owl:ObjectProperty ;
+    rdfs:label "includes"@en ;
+    rdfs:comment ""@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:subPropertyOf lrmoo:R4_embodies .
+
+odi:carriesRepresentation rdf:type owl:ObjectProperty ;
+    rdfs:label "carries representation"@en ;
+    rdfs:domain odi:StoryCard ;
+    rdfs:range odi:Representation ;
+    rdfs:subPropertyOf vir:K1_denotes ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasMeaningOf rdf:type owl:ObjectProperty ;
+    rdfs:label "has meaning of"@en ;
+    rdfs:domain odi:Representation ;
+    rdfs:range odi:Meaning ;
+    rdfs:subPropertyOf vir:K14_symbolize ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:specifies rdf:type owl:ObjectProperty ;
+    rdfs:label "specifies"@en ;
+    rdfs:domain odi:StoryCard ;
+    rdfs:range odi:DeckCard ;
+    rdfs:subPropertyOf crm:P62i_is_depicted_by ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:isContainedIn rdf:type owl:ObjectProperty ;
+    rdfs:label "is contained in"@en ;
+    rdfs:domain odi:DeckCard ;
+    rdfs:range odi:TarotDeck ;
+    rdfs:subPropertyOf crm:P46i_forms_part_of ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasAuthor rdf:type owl:ObjectProperty ;
+    rdfs:label "has author"@en ;
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range odi:Person ;
+    rdfs:subPropertyOf dct:creator ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+desmos:involvesOperation rdf:type owl:ObjectProperty ;
+    rdfs:label "involves operation"@en ;
+    rdfs:domain desmos:LiteraryConstraint ;
+    rdfs:range desmos:ProceduralOperation ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:hasVisibility rdf:type owl:ObjectProperty ;
+    rdfs:label "has visibility"@en ;
+    rdfs:domain desmos:LiteraryConstraint ;
+    rdfs:range desmos:ConstraintVisibility ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:hasDegreeOfComplexity rdf:type owl:ObjectProperty ;
+    rdfs:label "has degree of complexity"@en ;
+    rdfs:domain desmos:LiteraryConstraint ;
+    rdfs:range desmos:ComplexityDegree ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+odi:hasPublisher rdf:type owl:ObjectProperty ;
+    rdfs:label "has publisher"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf rdam:P30362 ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:placeOfPublication rdf:type owl:ObjectProperty ;
+    rdfs:label "place of publication"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range odi:Place ;
+    rdfs:subPropertyOf rdam:P30088 ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasChapter rdf:type owl:ObjectProperty ;
+    rdfs:label "has chapter"@en ;
+    rdfs:domain odi:Edition ;
+    rdfs:range odi:Chapter ;
+    rdfs:subPropertyOf rdam:P30033 ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+
+#################################################################
+#
+#    DATATYPE PROPERTIES 
+#
+#################################################################
+
+crm:P190_has_symbolic_content rdf:type owl:DatatypeProperty ;
+    rdfs:label "has symbolic content"@en ;
+    rdfs:domain vir:IC9_Representation ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+rdaw:P10088 rdf:type owl:DatatypeProperty ;
+    rdfs:label "has title of work"@en ;
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/w/> .
+
+rdae:P20312 rdf:type owl:DatatypeProperty ;
+    rdfs:label "has title of expression"@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/e/> .
+
+rdam:P30011 rdf:type owl:DatatypeProperty ;
+    rdfs:label "has date of publication"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range xsd:integer ;
+    rdfs:isDefinedBy <http://rdaregistry.info/Elements/m/> .
+
+odi:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    rdfs:domain crm:E22_Human-Made_Object ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasTextualReferent rdf:type owl:DatatypeProperty ;
+    rdfs:label "has textual referent"@en ;
+    rdfs:domain odi:Representation ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf crm:P190_has_symbolic_content ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasDate rdf:type owl:DatatypeProperty ;
+    rdfs:label "has date"@en ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasTitle rdf:type owl:DatatypeProperty ;
+    rdfs:label "has title"@en ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf rdaw:P10088 ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+odi:hasPublicationDate rdf:type owl:DatatypeProperty ;
+    rdfs:label "has publication date"@en ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf rdam:P30011 ;
+    rdfs:isDefinedBy <https://w3id.org/odi/> .
+
+
+
+#################################################################
+#
+#    INDIVIDUALS  
+#
+#################################################################
+
+desmos:contraction rdf:type desmos:ProceduralOperation ;
+    rdfs:label "contraction"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:extraction rdf:type desmos:ProceduralOperation ;
+    rdfs:label "extraction"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .     
+
+desmos:multiplication rdf:type desmos:ProceduralOperation ;
+    rdfs:label "multiplication"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:displacement rdf:type desmos:ProceduralOperation ;
+    rdfs:label "displacement"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:substitution rdf:type desmos:ProceduralOperation ;
+    rdfs:label "substitution"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:addition rdf:type desmos:ProceduralOperation ;
+    rdfs:label "addition"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:subtraction rdf:type desmos:ProceduralOperation ;
+    rdfs:label "subtraction"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:division rdf:type desmos:ProceduralOperation ;
+    rdfs:label "division"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:visible_explicitly rdf:type desmos:ConstraintVisibility ; 
+    rdfs:label "visible explicitly"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:visible_implicitly rdf:type desmos:ConstraintVisibility ; 
+    rdfs:label "visible implicitly"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:invisible_explicitly rdf:type desmos:ConstraintVisibility ; 
+    rdfs:label "invisible explicitly"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:invisible_implicitly rdf:type desmos:ConstraintVisibility ; 
+    rdfs:label "invisible implicitly"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:hard rdf:type desmos:ComplexityDegree ; 
+    rdfs:label "hard"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .
+
+desmos:soft rdf:type desmos:ComplexityDegree ; 
+    rdfs:label "soft"@en ;
+    rdfs:isDefinedBy <https://w3id.org/desmos/> .

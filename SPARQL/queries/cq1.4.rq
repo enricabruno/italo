@@ -1,0 +1,6 @@
+SELECT ?constraint ?constraintLabel ?complexity ?complexityLabel
+WHERE {
+  ?constraint rdfs:label ?constraintLabel ;
+              desmos:hasDegreeOfComplexity ?complexity .
+  OPTIONAL { ?complexity rdfs:label ?complexityLabel . }
+}

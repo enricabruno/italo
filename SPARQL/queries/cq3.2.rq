@@ -1,0 +1,12 @@
+SELECT DISTINCT ?tarotCard ?cardLabel ?sharedMeaningLabel
+WHERE {
+  ?atomOrlando crm:P62i_is_depicted_by ?tarotCard ; vir:K1_denotes ?repOrlando .
+  ?atomAstolfo crm:P62i_is_depicted_by ?tarotCard ; vir:K1_denotes ?repAstolfo .
+  ?tarotCard rdfs:label ?cardLabel .
+  
+  FILTER(CONTAINS(STR(?atomOrlando), "storiaCinque"))
+  FILTER(CONTAINS(STR(?atomAstolfo), "storiaSei"))
+  ?repOrlando crm:K14_symbolize ?sharedConcept .
+  ?repAstolfo crm:K14_symbolize ?sharedConcept .
+  ?sharedConcept rdfs:label ?sharedMeaningLabel .
+}

@@ -1,0 +1,52 @@
+﻿tarotCard,cardLabel,golemNarrativeType,textualAnchor
+http://w3id.org/italo/data/re-di-spade,Re di Spade,https://w3id.org/golem/ontologyG1_Character,Orlando paladino che mulinava la sua Durlindana.
+http://w3id.org/italo/data/re-di-spade,Re di Spade,https://w3id.org/odi/Representation,Orlando paladino che mulinava la sua Durlindana.
+http://w3id.org/italo/data/re-di-spade,Re di Spade,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,Orlando paladino che mulinava la sua Durlindana.
+http://w3id.org/italo/data/dieci-di-spade,Dieci di Spade,https://w3id.org/golem/ontologyG5_Narrative_Event,E subito i nostri occhi furono come accecati dal polverone delle battaglie [...].
+http://w3id.org/italo/data/dieci-di-spade,Dieci di Spade,https://w3id.org/odi/Representation,E subito i nostri occhi furono come accecati dal polverone delle battaglie [...].
+http://w3id.org/italo/data/dieci-di-spade,Dieci di Spade,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,E subito i nostri occhi furono come accecati dal polverone delle battaglie [...].
+http://w3id.org/italo/data/regina-di-spade,Regina di Spade,https://w3id.org/golem/ontologyG1_Character,"donna bionda, che in mezzo alle lame affilate e alle piastre di ferro affaccia l'inafferrabile sorriso d'un gioco sensuale, noi riconoscemmo Angelica, la maga venuta dal Catai per la rovina delle armate franche [...]."
+http://w3id.org/italo/data/regina-di-spade,Regina di Spade,https://w3id.org/odi/Representation,"donna bionda, che in mezzo alle lame affilate e alle piastre di ferro affaccia l'inafferrabile sorriso d'un gioco sensuale, noi riconoscemmo Angelica, la maga venuta dal Catai per la rovina delle armate franche [...]."
+http://w3id.org/italo/data/regina-di-spade,Regina di Spade,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,"donna bionda, che in mezzo alle lame affilate e alle piastre di ferro affaccia l'inafferrabile sorriso d'un gioco sensuale, noi riconoscemmo Angelica, la maga venuta dal Catai per la rovina delle armate franche [...]."
+http://w3id.org/italo/data/dieci-di-bastoni,Dieci di Bastoni,https://w3id.org/golem/ontologyG13_Narrative_Location,"Vedemmo la foresta schiudersi malvolentieri all'avanzare del campione [...] Il bosco dell'amore, Orlando, non é luogo per te!"
+http://w3id.org/italo/data/dieci-di-bastoni,Dieci di Bastoni,https://w3id.org/odi/Representation,"Vedemmo la foresta schiudersi malvolentieri all'avanzare del campione [...] Il bosco dell'amore, Orlando, non é luogo per te!"
+http://w3id.org/italo/data/dieci-di-bastoni,Dieci di Bastoni,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,"Vedemmo la foresta schiudersi malvolentieri all'avanzare del campione [...] Il bosco dell'amore, Orlando, non é luogo per te!"
+http://w3id.org/italo/data/il-carro,Il Carro,https://w3id.org/golem/ontologyG5_Narrative_Event,una sola visione lo occupava: [...] l'incedere fatato d'Angelica nel bosco [...].
+http://w3id.org/italo/data/il-carro,Il Carro,https://w3id.org/odi/Representation,una sola visione lo occupava: [...] l'incedere fatato d'Angelica nel bosco [...].
+http://w3id.org/italo/data/il-carro,Il Carro,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,una sola visione lo occupava: [...] l'incedere fatato d'Angelica nel bosco [...].
+http://w3id.org/italo/data/lo-amore,L'Amore,https://w3id.org/golem/ontologyG5_Narrative_Event,una stretta d'amore morbida e struggente univa intanto Angelica e Medoro.
+http://w3id.org/italo/data/lo-amore,L'Amore,https://w3id.org/odi/Representation,una stretta d'amore morbida e struggente univa intanto Angelica e Medoro.
+http://w3id.org/italo/data/lo-amore,L'Amore,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,una stretta d'amore morbida e struggente univa intanto Angelica e Medoro.
+http://w3id.org/italo/data/fante-di-bastoni,Fante di Bastoni,https://w3id.org/golem/ontologyG1_Character,"un giovanottino del seguito, snello e civettuolo come una fanciulla"
+http://w3id.org/italo/data/fante-di-bastoni,Fante di Bastoni,https://w3id.org/odi/Representation,"un giovanottino del seguito, snello e civettuolo come una fanciulla"
+http://w3id.org/italo/data/fante-di-bastoni,Fante di Bastoni,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,"un giovanottino del seguito, snello e civettuolo come una fanciulla"
+http://w3id.org/italo/data/il-sole,Il Sole,https://w3id.org/golem/ontologyG1_Character,Un amorino fuggiva a volo portando via il lume della saggezza d'Orlando [...].
+http://w3id.org/italo/data/il-sole,Il Sole,https://w3id.org/odi/Representation,Un amorino fuggiva a volo portando via il lume della saggezza d'Orlando [...].
+http://w3id.org/italo/data/il-sole,Il Sole,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,Un amorino fuggiva a volo portando via il lume della saggezza d'Orlando [...].
+http://w3id.org/italo/data/la-forza,La Forza,https://w3id.org/golem/ontologyG1_Character,quel fiore della cavalleria trasformato in una cieca esplosione tellurica [...].
+http://w3id.org/italo/data/la-forza,La Forza,https://w3id.org/odi/Representation,quel fiore della cavalleria trasformato in una cieca esplosione tellurica [...].
+http://w3id.org/italo/data/la-forza,La Forza,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,quel fiore della cavalleria trasformato in una cieca esplosione tellurica [...].
+http://w3id.org/italo/data/cinque-di-bastoni,Cinque di Bastoni,https://w3id.org/golem/ontologyG5_Narrative_Event,schianto dei tronchi di quercia sradicati dall'ossesso
+http://w3id.org/italo/data/cinque-di-bastoni,Cinque di Bastoni,https://w3id.org/odi/Representation,schianto dei tronchi di quercia sradicati dall'ossesso
+http://w3id.org/italo/data/cinque-di-bastoni,Cinque di Bastoni,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,schianto dei tronchi di quercia sradicati dall'ossesso
+http://w3id.org/italo/data/sette-di-spade,Sette di Spade,https://w3id.org/golem/ontologyG16_Object,l'ozio della Durlindana rimasta appesa a un albero e dimenticata
+http://w3id.org/italo/data/sette-di-spade,Sette di Spade,https://w3id.org/odi/Representation,l'ozio della Durlindana rimasta appesa a un albero e dimenticata
+http://w3id.org/italo/data/sette-di-spade,Sette di Spade,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,l'ozio della Durlindana rimasta appesa a un albero e dimenticata
+http://w3id.org/italo/data/cinque-di-denari,Cinque di Denari,https://w3id.org/golem/ontologyG5_Narrative_Event,spreco d'energie e di beni
+http://w3id.org/italo/data/cinque-di-denari,Cinque di Denari,https://w3id.org/odi/Representation,spreco d'energie e di beni
+http://w3id.org/italo/data/cinque-di-denari,Cinque di Denari,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,spreco d'energie e di beni
+http://w3id.org/italo/data/la-luna,La Luna,https://w3id.org/golem/ontologyG13_Narrative_Location,una terra oramai lunare
+http://w3id.org/italo/data/la-luna,La Luna,https://w3id.org/odi/Representation,una terra oramai lunare
+http://w3id.org/italo/data/la-luna,La Luna,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,una terra oramai lunare
+http://w3id.org/italo/data/il-matto,Il Matto,https://w3id.org/golem/ontologyG1_Character,"Sfogato ormai il più grosso groppo di furore, [...] con la testa piena di penne [...] ecco che Orlando era disceso giù nel cuore caotico delle cose, [...] al punto d'intersezione di tutti gli ordini possibili."
+http://w3id.org/italo/data/il-matto,Il Matto,https://w3id.org/odi/Representation,"Sfogato ormai il più grosso groppo di furore, [...] con la testa piena di penne [...] ecco che Orlando era disceso giù nel cuore caotico delle cose, [...] al punto d'intersezione di tutti gli ordini possibili."
+http://w3id.org/italo/data/il-matto,Il Matto,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,"Sfogato ormai il più grosso groppo di furore, [...] con la testa piena di penne [...] ecco che Orlando era disceso giù nel cuore caotico delle cose, [...] al punto d'intersezione di tutti gli ordini possibili."
+http://w3id.org/italo/data/tre-di-coppe,Tre di Coppe,https://w3id.org/golem/ontologyG16_Object,La sua ragione? [...] un'ampolla custodita nella Valle delle Ragioni Perdute
+http://w3id.org/italo/data/tre-di-coppe,Tre di Coppe,https://w3id.org/odi/Representation,La sua ragione? [...] un'ampolla custodita nella Valle delle Ragioni Perdute
+http://w3id.org/italo/data/tre-di-coppe,Tre di Coppe,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,La sua ragione? [...] un'ampolla custodita nella Valle delle Ragioni Perdute
+http://w3id.org/italo/data/la-giustizia,La Giustizia,https://w3id.org/golem/ontologyG1_Character,"i cavalieri dell'Armata di Carlomagno seguivano le piste del loro campione [...], non rinunciavano a riportare la sua spada al servizio di Ragione e Giustizia."
+http://w3id.org/italo/data/la-giustizia,La Giustizia,https://w3id.org/odi/Representation,"i cavalieri dell'Armata di Carlomagno seguivano le piste del loro campione [...], non rinunciavano a riportare la sua spada al servizio di Ragione e Giustizia."
+http://w3id.org/italo/data/la-giustizia,La Giustizia,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,"i cavalieri dell'Armata di Carlomagno seguivano le piste del loro campione [...], non rinunciavano a riportare la sua spada al servizio di Ragione e Giustizia."
+http://w3id.org/italo/data/il-penduto,Il Penduto,https://w3id.org/golem/ontologyG1_Character,Il paladino legato a testa in giù [...] Lasciatemi così. Ho fatto tutto il giro e ho capito. Il mondo si legge all'incontrario. Tutto è chiaro.
+http://w3id.org/italo/data/il-penduto,Il Penduto,https://w3id.org/odi/Representation,Il paladino legato a testa in giù [...] Lasciatemi così. Ho fatto tutto il giro e ho capito. Il mondo si legge all'incontrario. Tutto è chiaro.
+http://w3id.org/italo/data/il-penduto,Il Penduto,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation,Il paladino legato a testa in giù [...] Lasciatemi così. Ho fatto tutto il giro e ho capito. Il mondo si legge all'incontrario. Tutto è chiaro.

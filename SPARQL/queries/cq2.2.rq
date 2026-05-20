@@ -1,0 +1,8 @@
+SELECT DISTINCT ?tarotCard ?cardLabel ?deck ?deckName ?deckDate
+WHERE {
+  ?tarotCard crm:P46i_forms_part_of ?deck ;
+             rdfs:label ?cardLabel .
+  
+  ?deck rdfs:label ?deckName .
+  OPTIONAL { ?deck dct:created ?deckDate . }
+}

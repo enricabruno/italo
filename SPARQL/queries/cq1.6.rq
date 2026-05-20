@@ -1,0 +1,10 @@
+SELECT DISTINCT ?manifestation ?manifestationTitle ?partManifestation ?partTitle
+WHERE {
+  ?manifestation a lrmoo:F3_Manifestation ;
+                 rdam:P30156 ?manifestationTitle ;
+                 rdam:P30033 ?partManifestation .
+  
+  ?partManifestation a lrmoo:F3_Manifestation ;
+                     rdam:P30156 ?partTitle .
+  FILTER (REGEX(?partTitle, "Presentazione|Introduzione|Nota", "i"))
+}

@@ -1,0 +1,12 @@
+SELECT DISTINCT ?tarotCard ?cardLabel ?meaningLabel ?calvinoLiteralQuote
+WHERE {
+  ?cardAtom crm:P62i_is_depicted_by ?tarotCard ;
+            vir:K1_denotes ?representation .
+  ?tarotCard rdfs:label ?cardLabel .
+  
+  ?representation crm:K14_symbolize ?meaning ;
+                  crm:P190_has_symbolic_content ?calvinoLiteralQuote .
+  ?meaning rdfs:label ?meaningLabel .
+  
+  FILTER(CONTAINS(STR(?cardAtom), "storiaCinque"))
+}

@@ -1,0 +1,10 @@
+SELECT DISTINCT ?tarotCard ?cardLabel
+WHERE {
+  ?atomOrlando crm:P62i_is_depicted_by ?tarotCard .
+  ?atomAstolfo crm:P62i_is_depicted_by ?tarotCard .
+  
+  ?tarotCard rdfs:label ?cardLabel .
+  
+  FILTER(CONTAINS(STR(?atomOrlando), "storiaCinque"))
+  FILTER(CONTAINS(STR(?atomAstolfo), "storiaSei"))
+}

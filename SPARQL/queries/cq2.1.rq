@@ -1,0 +1,10 @@
+SELECT DISTINCT ?storyTitle ?tarotCard ?cardLabel
+WHERE {
+  ?story a lrmoo:F2_Expression ;
+         rdae:P20312 ?storyTitle .
+  FILTER(CONTAINS(?storyTitle, "Orlando pazzo per amore"))
+  BIND(STRAFTER(STR(?story), "http://w3id.org/italo/data/") AS ?storyLocalName)
+  ?cardAtom crm:P62i_is_depicted_by ?tarotCard .
+  ?tarotCard rdfs:label ?cardLabel .
+  FILTER(CONTAINS(STR(?cardAtom), ?storyLocalName))
+}

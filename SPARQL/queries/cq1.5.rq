@@ -1,0 +1,6 @@
+SELECT ?constraint ?constraintLabel ?visibility ?visibilityLabel
+WHERE {
+  ?constraint rdfs:label ?constraintLabel ;
+              desmos:hasVisibility ?visibility .
+  OPTIONAL { ?visibility rdfs:label ?visibilityLabel . }
+}

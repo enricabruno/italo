@@ -1,0 +1,7 @@
+SELECT ?constraint ?constraintLabel ?constraintNature
+WHERE {
+  ?constraint rdfs:label ?constraintLabel ;
+              a ?constraintNature .
+  
+  FILTER (?constraintNature IN (desmos:FormalConstraint, desmos:SemanticConstraint))
+}

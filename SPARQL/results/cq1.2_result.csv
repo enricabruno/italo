@@ -1,0 +1,4 @@
+﻿constraint,constraintLabel,constraintNature
+http://w3id.org/italo/data/03_constraint,Quadrato magico,https://w3id.org/desmos/FormalConstraint
+http://w3id.org/italo/data/01_constraint,Lipofonia,https://w3id.org/desmos/SemanticConstraint
+http://w3id.org/italo/data/02_constraint,Mazzo di carte,https://w3id.org/desmos/SemanticConstraint

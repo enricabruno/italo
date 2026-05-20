@@ -1,0 +1,10 @@
+SELECT DISTINCT ?tarotCard ?cardLabel ?iconographicDescription
+WHERE {
+  ?cardAtom crm:P62i_is_depicted_by ?tarotCard .
+  ?tarotCard rdfs:label ?cardLabel .
+  OPTIONAL {
+    ?cardAtom vir:K1_denotes ?representation .
+    ?representation crm:P190_has_symbolic_content ?iconographicDescription .
+  }
+  FILTER(CONTAINS(STR(?cardAtom), "storiaCinque"))
+}
