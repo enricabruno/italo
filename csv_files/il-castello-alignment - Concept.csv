@@ -1,0 +1,4 @@
+desmos:LiteraryConstraint,rdfs:label@it,rdfs:label@en,skos:definition,skos:exactMatch,skos:related
+01_constraint,Lipofonia,Lipophony,Vincolo semantico legato ai personaggi ai quali manca la voce. Il termine è stato mutuato da Marcel Benabou (lipophonie).,,https://www.wikidata.org/wiki/Q836165
+02_constraint,Mazzo di carte,Deck card,Vincolo semantico legato al tema delle storie che sono costruite creando delle sequenze narrative con un mazzo di tarocchi cinquecentesco che rimanda ad una ambientazione cavalleresca.,https://www.wikidata.org/wiki/Q726633,
+03_constraint,Quadrato magico,Magic square,"Vincolo formale legato alla disposizione delle carte. Ogni sequenza di carte corrisponde ad una storia all'interno della collezione. Dal momento che ogni sequenza all'interno del quadrato può essere letto da sinistra a destra, da destra a sinistra, da sopra a sotto o da sotto a sopra alcune carte si ripetono in più di una storia.",https://www.wikidata.org/wiki/Q192089,
